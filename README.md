@@ -8,11 +8,15 @@ Proyecto creado con la finalidad de agilizar y facilitar el trabajo de los técn
 
 Necesario servidor Apache + MySQL
 
-*Linux
+* Linux
 ```
 /etc/init.d/apache2 start
 ```
-
+* Windows (panel de XAMPP)
+```
+Arrancar Apache
+Arrancar MySQL
+```
 ### Instalacion
 
 Solo es necesario ejecutar el siguiente comando:
