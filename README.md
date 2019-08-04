@@ -10,12 +10,11 @@ Necesario servidor Apache + MySQL
 
 * Linux
 ```
-/etc/init.d/apache2 start
+sudo apt-get install apache2
 ```
 * Windows (panel de XAMPP)
 ```
-Arrancar Apache
-Arrancar MySQL
+[XAMPP](https://www.apachefriends.org/es/index.html)
 ```
 ### Instalacion
 
@@ -27,10 +26,21 @@ Say what the step will be
 Give the example
 ```
 Creación de la Base de Datos e inserción de registros
-
+```
+Cargar fichero sentencia1.sql
+```
 Una vez descargado, iniciar Apache, MySQL y ejecutar index.php
 ```
 until finished
+```
+* Linux
+```
+/etc/init.d/apache2 start
+```
+* Windows (panel de XAMPP)
+```
+Arrancar Apache
+Arrancar MySQL
 ```
 
 End with an example of getting some data out of the system or using it for a little demo
