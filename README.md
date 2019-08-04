@@ -91,8 +91,7 @@ Lista de contribuidores [contributors](https://github.com/your/project/contribut
 
 This project is licensed under the GNU License - see the [LICENSE.md](LICENSE.md) file for details
 
-## Acknowledgments
+## Agradecimientos
 
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+* A Félix, Alberto E y Alberto P, mis profesores de programación.
+* A Mario y Alberto E, mis profesores de desarrollo web.
