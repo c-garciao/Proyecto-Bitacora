@@ -1,5 +1,4 @@
-﻿# Project Title
-
+﻿# Proyecto bitácora SGAD 24x7
 Proyecto bitácora SGAD 24x7
 ## Getting Started
 
@@ -9,11 +8,12 @@ Proyecto creado con la finalidad de agilizar y facilitar el trabajo de los técn
 
 Necesario servidor Apache + MySQL
 
+*Linux
 ```
-Give examples
+/etc/init.d/apache2 start
 ```
 
-### Installing
+### Instalacion
 
 Solo es necesario ejecutar el siguiente comando:
 
