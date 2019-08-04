@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body{
+    margin: 1%;
+    font-size: 20px;
+}
+#menu{
+    padding: 1%;
+
+}
+#menu a{
+    text-decoration: none;
+    background-color: #ff1100;
+    color: white;
+
+}
+#menu .menu_opc_seleccionada {
+    background-color: blue;
+    color:white;
+}
+#menu a:hover{
+    background-color: blue;
+    color:white;
+
+}
+#menu:visited{
+    color: white;
+}
+#contenedor{
+    margin: 0 auto;
+    text-align: center;
+}
+table{
+    margin-left: auto;
+    margin-right: auto;
+}
+table, th, td{
+    border-style: double;
+}
+p {
+    text-align: center;
+}
+
+textarea{
+    resize: vertical;
+    width: 100%;
+}
+
+/*En  pruebas*/
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none; 
+    margin: 0; 
+}
+/**/
+/*Estilos tabla*/
+.oper{
+    background-color: #fd6444;
+}
+.dia{
+    background-color: #fafd44;
+}
+.metodo_entrada{
+    background-color: #6efd44;
+}
+.h_aparicion{
+    background-color: #44fdcb;
+}
+.h_desaparicion{
+    background-color: #44fdfd;
+}
