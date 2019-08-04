@@ -4,7 +4,7 @@ Proyecto bitácora SGAD 24x7
 
 Proyecto creado con la finalidad de agilizar y facilitar el trabajo de los técnicos de operaciones.
 
-### Prerequisites
+### Requisitos
 
 Necesario servidor Apache + MySQL
 
@@ -16,7 +16,7 @@ sudo apt-get install apache2
 ```
 [XAMPP](https://www.apachefriends.org/es/index.html)
 ```
-### Instalacion
+### Instalación
 
 Solo es necesario ejecutar el siguiente comando:
 
