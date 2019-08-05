@@ -14,7 +14,8 @@ sudo apt-get install apache2
 ```
 * Windows (panel de XAMPP)
 ```
-[XAMPP](https://www.apachefriends.org/es/index.html)
+[Apache] Start
+[MySQL] Start
 ```
 ### Instalación
 
@@ -72,6 +73,9 @@ Add additional notes about how to deploy this on a live system
 ## Built With
 
 * [NetBeans](https://netbeans.org/) - IDE utilizado
+* [XAMPP](https://www.apachefriends.org/es/index.html) - Programa utilizado para simular el entorno
+* [PHP 7.2.10](https://www.php.net/) - Versión de PHP utilizada
+* [MySQL](https://www.mysql.com/) - Motor de BD utilizado
 
 ## Contributing
 
