@@ -10,7 +10,6 @@ window.addEventListener("beforeunload", function (event) {
         event.returnValue = "Se perderan los datos, ¿quieres continuar?.";
         var b_div = document.getElementById('caja1');
         b_div.style.display = "none";
-
     }
 });
 
@@ -18,43 +17,25 @@ function defineFecha() {//Funcion OBSOLETA. Se realiza desde PHP debido a multit
     var fecha = new Date;
     alert("La fecha de hoy es " + fecha.getDate() + "-" + (fecha.getMonth() + 1) + "-" + fecha.getFullYear());
     dia = document.getElementById('num_dia');
-    // dia.value(fecha.)
     var dia_ = fecha.getDate();
     var mes_ = fecha.getMonth() + 1;
     var anio_ = fecha.getFullYear();
-
     if (dia_ < 10) {
         dia_ = '0' + dia_;
     }
     if (mes_ < 10) {
         mes_ = '0' + mes_;
     }
-    //switch
-
     fechaActual = anio_ + '/' + mes_ + '/' + dia_;
     alert("Fecha act vale: " + fechaActual);
-
-    /*function aniadeCero(fec){
-     if(parseInt(fec)<10){
-     return "0"+fec
-     }
-     return fec;
-     }*///document.getElementById('num_dia').valueAsDate = fechaActual;
-    /*var today = moment().format('YYYY-MM-DD');
-     document.getElementById("num_dia").value = today;*/
-
     document.getElementById("num_dia").valueAsDate = new Date();
-
-    //dia.value = fechaActual;
 }
-//today = dd+'/'+mm+'/'+yyyy;
 /*Funcion que solicita confirmacion por parte del usuario antes de borrar los datos del formulario (vease la llamada a la funcion desde el formulario)*/
 function borrar_formulario() {
     document.getElementById('aviso').style.display = "none";
     return confirm("¿De verdad que quieres borrar los datos?. \nTendrás que volver a escribirlos de nuevo");
 }
 function borrar_alertas() {
-    //alert("Hola");
     var b_div = document.getElementById('caja1');
     b_div.style.display = "none"
 }
