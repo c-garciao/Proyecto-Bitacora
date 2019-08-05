@@ -49,6 +49,7 @@ try {
         $final_oper = obtener("finalizacion_operativa");
         $DATOS ['finalizacion_operativa'] = $final_oper;
     }
+    unset($_SESSION["no_volver"]);
 } catch (PDOException $e) {
     echo "Error: <br>";
     echo $consulta . "<br>" . $e->getMessage();
@@ -60,10 +61,10 @@ try {
     <head>
         <meta charset="UTF-8"/>
         <title>Pagina Bitacora</title>
-        <link rel="stylesheet" type="text/css" href="./estilo_comun.css"/>
+        <link rel="stylesheet" type="text/css" href="./recursos/estilos/estilo_comun.css"/>
 
          <!-- <script type="text/javascript" src=""/> -->
-        <script src="validaciones.js"></script>
+        <script src="recursos/js/validaciones.js"></script>
     </head>
     <body>
         <div id="menu">
@@ -71,7 +72,7 @@ try {
         </div>
         <div id="contenedor">
             <form action="guardaBitacora.php" method="POST">
-            <!--<form onsubmit=compruebaForm() action="guardaBitacora.php" method="POST">-->
+                <!--<form onsubmit=compruebaForm() action="guardaBitacora.php" method="POST">-->
                 <table border="1px solid black">
                     <tr>
                         <th class="oper">Operador</th>
@@ -116,10 +117,9 @@ try {
                         </td>
                         <td id="aplicar_op" name="patata">
                         <!-- <input name="tiempo_op" type="radio" checked> -->
-                            <input id="tiempo_operativa" name="tiempo_op" type="time" value="00:10"><br/>
-                            <label for="txt_tiempo_op">
-                                <input id="no_oper" name="tiempo_op" id="txt_tiempo_op" value="No se aplica operativa" type="radio">No se realiza operativa
-                            </label>
+                            <input id="no_oper" name="tiempo_op" type="time" value="00:10"><br/>
+                            <label for="tiempo_op"><input id="no_oper" name="tiempo_op" id="txt_tiempo_op" value="No se aplica operativa" type="radio">No se realiza operativa</label>
+
                         </td>
                         <td>
                             <select name="llamadas_">
@@ -225,7 +225,7 @@ try {
                             </select>
                         </td>
                         <td>
-                            <input name="id_pandora" placeholder="ID Pandora" type="number" size="3px">
+                            <input name="id_pandora" placeholder="ID Pandora" type="number" default=0" size="3px">
                         </td>
                 </table>
                 <br/>
@@ -241,11 +241,23 @@ try {
                     </td>
                     </tr>
                 </table>
-                <p><input type="submit" id="btn_guarda_bitacora" value="Guardar Bitacora" onclick="formulario_ok = true; aplicarOper()"/>
+                <p><input type="submit" id="btn_guarda_bitacora" value="Guardar Bitacora" onclick="formulario_ok = true;
+                        aplicarOper()"/>
                     <input type="reset" onclick="return borrar_formulario()" value="BORRAR"/>
                     <!--<input type="button" value="Prueba" onclick="defineFecha()"/>-->
                     <input type="button" value="Salir" onclick="sessionStorage.clear();"/></p>
             </form>
+            <div id="caja1"onclick="borrar_alertas">
+                <?php
+                if (isset($_SESSION["txt_alerta"])) {
+                    $alerta = recoge("ok_bd");
+                    if ($alerta != "" || !empty($alerta)) {
+                        print '<h2 id="aviso">' . $alerta . '<a onclick="borrar_alertas"><img src="./recursos/imagenes/error.svg" onclick="borrar_alertas()" alt="Cerrar mensaje" title="Quitar mensaje"/></a></h2>';
+                        unset($_SESSION["txt_alerta"]);
+                    }
+                }//header_remove("aviso");
+                ?>
+            </div>
 
         </div>
     </body>

@@ -52,6 +52,31 @@ CREATE TABLE `finalizacion_operativa` (
  `finalizacion_oper` varchar(40) COLLATE utf8mb4_unicode_ci NOT NULL,
  PRIMARY KEY (`id_oper_ok`)
 );
+CREATE TABLE `bitacora` (
+`id_registro`int(20) AUTO_INCREMENT,
+`nombre_operador`  varchar(30),
+`dia` varchar(10),
+`metodo_entrada` varchar(30),
+`hora_aparicion` varchar(5),
+`hora_desaparicion` varchar(5),
+`realizacion_operativa` varchar(25),
+`llamadas_recibidas` varchar(50),
+`grupo_resolutor` varchar(35),
+`tecnico` varchar(50),
+`envio_correo` varchar(75),
+`host` varchar(100),
+`servicio` varchar(100),
+`alarma` varchar(200),
+`operativa` varchar(40),
+`operativa_aplicada` varchar(100),
+`operativa_ok` varchar(25),
+`serbicio_bi` varchar(100),
+`grupo_escalado` varchar(50),
+`id_pandora` int(10),
+`acciones_realizadas` varchar(400),
+`respuesta_cierre` varchar(400),
+primary key(`id_registro`)
+);
 
 INSERT INTO lista_correos (correo) 
 VALUES 

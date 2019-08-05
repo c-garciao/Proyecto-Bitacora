@@ -71,3 +71,9 @@ input[type=number]::-webkit-outer-spin-button {
 .h_desaparicion{
     background-color: #44fdfd;
 }
+/*Estilos js*/
+#aviso img{
+    cursor: pointer;
+    margin: .1%;
+    width:  1.2%;
+}

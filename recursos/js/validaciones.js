@@ -8,6 +8,9 @@ var formulario_ok = false;
 window.addEventListener("beforeunload", function (event) {
     if (!formulario_ok) {
         event.returnValue = "Se perderan los datos, ¿quieres continuar?.";
+        var b_div = document.getElementById('caja1');
+        b_div.style.display = "none";
+
     }
 });
 
@@ -47,7 +50,13 @@ function defineFecha() {//Funcion OBSOLETA. Se realiza desde PHP debido a multit
 //today = dd+'/'+mm+'/'+yyyy;
 /*Funcion que solicita confirmacion por parte del usuario antes de borrar los datos del formulario (vease la llamada a la funcion desde el formulario)*/
 function borrar_formulario() {
+    document.getElementById('aviso').style.display = "none";
     return confirm("¿De verdad que quieres borrar los datos?. \nTendrás que volver a escribirlos de nuevo");
+}
+function borrar_alertas() {
+    //alert("Hola");
+    var b_div = document.getElementById('caja1');
+    b_div.style.display = "none"
 }
 /*Funcion para cambiar el valor de la columna "Tiempo en realizar la operativa"*/
 function aplicarOper() {
