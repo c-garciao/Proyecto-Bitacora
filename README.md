@@ -14,7 +14,8 @@ sudo apt-get install apache2
 ```
 * Windows (panel de XAMPP)
 ```
-[XAMPP](https://www.apachefriends.org/es/index.html)
+Descargar e instalar el programa:
+https://www.apachefriends.org/download.html
 ```
 ### Instalación
 
@@ -30,9 +31,7 @@ Creación de la Base de Datos e inserción de registros
 Cargar fichero sentencia1.sql
 ```
 Una vez descargado, iniciar Apache, MySQL y ejecutar index.php
-```
-until finished
-```
+
 * Linux
 ```
 /etc/init.d/apache2 start
@@ -45,26 +44,6 @@ Arrancar MySQL
 
 End with an example of getting some data out of the system or using it for a little demo
 
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
 ## Deployment
 
 Add additional notes about how to deploy this on a live system
@@ -72,6 +51,9 @@ Add additional notes about how to deploy this on a live system
 ## Built With
 
 * [NetBeans](https://netbeans.org/) - IDE utilizado
+* [XAMPP](https://www.apachefriends.org/es/index.html) - Programa utilizado para simular el entorno
+* [PHP 7.2.10](https://www.php.net/) - Versión de PHP utilizada
+* [MySQL](https://www.mysql.com/) - Motor de BD utilizado
 
 ## Contributing
 
