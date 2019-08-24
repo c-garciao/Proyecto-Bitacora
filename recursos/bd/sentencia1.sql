@@ -53,12 +53,12 @@ CREATE TABLE `finalizacion_operativa` (
  PRIMARY KEY (`id_oper_ok`)
 );
 CREATE TABLE `bitacora` (
-`id_registro`int(20) AUTO_INCREMENT,
+`id_registro`int(200) AUTO_INCREMENT,
 `nombre_operador`  varchar(30),
 `dia` varchar(10),
 `metodo_entrada` varchar(30),
 `hora_aparicion` varchar(5),
-`hora_desaparicion` varchar(5),
+`hora_desaparicion` varchar(15),
 `realizacion_operativa` varchar(25),
 `llamadas_recibidas` varchar(50),
 `grupo_resolutor` varchar(35),
@@ -78,6 +78,16 @@ CREATE TABLE `bitacora` (
 primary key(`id_registro`)
 );
 
+CREATE TABLE `cambio_turno` (
+ `id_c_t` int(100) unsigned NOT NULL AUTO_INCREMENT,
+ `texto` varchar(400) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `tipo` varchar(15),
+ PRIMARY KEY (`id_c_t`)
+);
+CREATE TABLE `bitacora_bk` AS SELECT * FROM `bitacora` WHERE 1=0;/*Con esta sentencia, creamos una tabla vacía (en ningún caso 1 va ser igual a 0). Lo hacemos para crear una tabla con la misma estructura pero vacía*/
+ALTER TABLE `bitacora_bk` ADD COLUMN (
+METODO VARCHAR (10)
+);/*Añadimos una columna la cual mediante un trigger nos indicara que se hizo sobre la tabla principal*/
 INSERT INTO lista_correos (correo) 
 VALUES 
 ('No se envía correo.')
@@ -502,3 +512,30 @@ VALUES
 ('Se escala a guardia'),
 ('Ignorar alerta'),
 ('Se escala por correo');
+
+/*TRIGGERS
+CREATE TRIGGER TR_BK_BIT_BORRAR
+BEFORE DELETE ON bitacora
+FOR EACH ROW
+BEGIN
+	INSERT INTO bitacora_bk VALUES (:OLD.id_registro, :OLD.nombre_operador, :OLD.dia,:OLD.metodo_entrada, :OLD.hora_aparicion ,:OLD.hora_desaparicion, :OLD.realizacion_operativa, :OLD.llamadas_recibidas, :OLD.grupo_resolutor, :OLD.tecnico, :OLD.envio_correo, :OLD.host,:OLD.servicio, :OLD.alarma, :OLD.operativa,:OLD.operativa_aplicada,:OLD.operativa_ok,:OLD.serbicio_bi, :OLD.grupo_escalado, :OLD.id_pandora, :OLD.acciones_realizadas, :OLD.respuesta_cierre, 'DELETE');
+END TR_BK_BIT;
+
+
+
+
+
+
+DELIMITER $$
+CREATE TRIGGER TR_BK_BIT
+BEFORE UPDATE OR DELETE ON bitacora
+FOR EACH ROW
+IF UPDATING THEN
+	INSERT INTO bitacora_bk VALUES (:OLD.id_registro, :OLD.nombre_operador, :OLD.dia,:OLD.metodo_entrada, :OLD.hora_aparicion ,:OLD.hora_desaparicion, :OLD.realizacion_operativa, :OLD.llamadas_recibidas, :OLD.grupo_resolutor, :OLD.tecnico, :OLD.envio_correo, :OLD.host,:OLD.servicio, :OLD.alarma, :OLD.operativa,:OLD.operativa_aplicada,:OLD.operativa_ok,:OLD.serbicio_bi, :OLD.grupo_escalado, :OLD.id_pandora, :OLD.acciones_realizadas, :OLD.respuesta_cierre, 'UPDATE');
+ELSIF bitacora_bk THEN
+	INSERT INTO AUDITAR_ALUMNOS VALUES (:OLD.id_registro, :OLD.nombre_operador, :OLD.dia,:OLD.metodo_entrada, :OLD.hora_aparicion ,:OLD.hora_desaparicion, :OLD.realizacion_operativa, :OLD.llamadas_recibidas, :OLD.grupo_resolutor, :OLD.tecnico, :OLD.envio_correo, :OLD.host,:OLD.servicio, :OLD.alarma, :OLD.operativa,:OLD.operativa_aplicada,:OLD.operativa_ok,:OLD.serbicio_bi, :OLD.grupo_escalado, :OLD.id_pandora, :OLD.acciones_realizadas, :OLD.respuesta_cierre, 'DELETE');
+END IF;
+END TR_BK_BIT;$$
+DELIMITER;
+
+*/

@@ -1,0 +1,16 @@
+.tipo_mensaje{
+    text-align: left;    
+}
+#demo{
+    font-size: 15px;
+    text-align: center;
+}
+.texto_ct{
+    text-align: left;
+}
+.texto_ct textarea {
+    width: 90%;
+}
+.c_t_txt{
+    width: 80%;
+}

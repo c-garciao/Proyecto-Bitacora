@@ -3,25 +3,31 @@
     padding: 0;
 }
 body{
+    max-width: 100%;
+        overflow-x: hidden;
     margin: 1%;
-    font-size: 20px;
+    font-size: 16px;
+    font-family: Arial;
 }
 #menu{
     padding: 1%;
+    /*background-color: #508AA1;*/
 
 }
 #menu a{
     text-decoration: none;
-    background-color: #ff1100;
+    background-color: #508AA1;
+    padding: 10px;
+    margin: 4px;
     color: white;
 
 }
 #menu .menu_opc_seleccionada {
-    background-color: blue;
+    background-color: #FFA800;
     color:white;
 }
 #menu a:hover{
-    background-color: blue;
+    background-color: #FFA800;
     color:white;
 
 }
@@ -35,6 +41,8 @@ body{
 table{
     margin-left: auto;
     margin-right: auto;
+    margin-top: 1%;
+    max-width: 80%;
 }
 table, th, td{
     border-style: double;
@@ -42,10 +50,18 @@ table, th, td{
 p {
     text-align: center;
 }
+th{
+    background-color: #C65911;
+    color:white;
+}
 
 textarea{
     resize: vertical;
     width: 100%;
+}
+input[type=checkbox]{
+    width: 40px; 
+    height: 40px; 
 }
 
 /*En  pruebas*/
@@ -55,7 +71,7 @@ input[type=number]::-webkit-outer-spin-button {
     margin: 0; 
 }
 /**/
-/*Estilos tabla*/
+/*Estilos tabla*//*
 .oper{
     background-color: #fd6444;
 }
@@ -70,10 +86,37 @@ input[type=number]::-webkit-outer-spin-button {
 }
 .h_desaparicion{
     background-color: #44fdfd;
-}
+}*/
 /*Estilos js*/
 #aviso img{
     cursor: pointer;
     margin: .1%;
     width:  1.2%;
+}
+.textarea_c_t{
+    resize: none;
+    margin-bottom: .3%;
+    margin-top: .3%;
+    width: 50%;
+}
+input[type=checkbox]{
+    width: 16px;
+    height:16px;
+}
+input[type=submit]{
+    margin: 10px;
+    font-size: 20px;
+}
+input[type=checkbox]:checked{
+    border: 20px solid red;
+}
+/**/
+.img_iconos {
+    size: 4px;
+}
+.img_iconos {
+    margin: 10px;
+    /*position: relative;
+    top: 20px;
+    right: 20px;*/
 }

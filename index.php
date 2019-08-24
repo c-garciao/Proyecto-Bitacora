@@ -1,6 +1,6 @@
 <!--Carlos Garcia Oliva 2019-->
 <?php
-include_once './funcionesBD.php';
+include_once './recursos/bd/funcionesBD.php';
 session_name("ses_hacienda"); //Creamos una sesion nueva y la iniciamos
 session_start();
 $mes = date('m');
@@ -49,6 +49,10 @@ try {
         $final_oper = obtener("finalizacion_operativa");
         $DATOS ['finalizacion_operativa'] = $final_oper;
     }
+    if (!isset($DATOS["cambio_turno"])) {
+        $ct = obtener("cambio_turno");
+        $DATOS ["cambio_turno"] = $ct;
+    }
     unset($_SESSION["no_volver"]);
 } catch (PDOException $e) {
     echo "Error: <br>";
@@ -67,10 +71,18 @@ try {
         <script src="recursos/js/validaciones.js"></script>
     </head>
     <body>
+        <noscript>Error. El navegador no soporta JavaScript o está deshabilitada la opción</noscript>
         <div id="menu">
-            <p><a href="#" class="menu_opc_seleccionada">Añadir a bitacora</a> <a href="#">Revisar Bitacora</a> <a href="">Informes (en pruebas)</a></p>
+            <p><a href="#" class="menu_opc_seleccionada" title="Inicio">Añadir a bitacora</a> <a href="" title="Generador de Informes">Informes (en pruebas)</a> <a  href="revisarBitacora.php" onclick="formulario_ok = true;" title="Revisar la Bitácora"> Revisar Bitacora </a><a href="cambioturno.php " onclick="formulario_ok = true;" title="Cambio de Turno"> Cambio Turno</a></p>
         </div>
         <div id="contenedor">
+            <div id="cambio_de_turno">
+                <?php
+                foreach ($DATOS ["cambio_turno"] as $txt) {
+                    print "<p><img class=\"img_iconos\" src=\"./recursos/imagenes/$txt[2].png\"/><textarea class=\"textarea_c_t\"disabled=\"true\" id=" . $txt[0] . ">" . $txt[1] . "</textarea></p>";
+                }
+                ?>
+            </div>
             <form action="guardaBitacora.php" method="POST">
                 <!--<form onsubmit=compruebaForm() action="guardaBitacora.php" method="POST">-->
                 <table border="1px solid black">
@@ -113,7 +125,8 @@ try {
                             <input id="num_dia" type="time" name="hora_aparicion" required="true">
                         </td>
                         <td class="h_desaparicion">
-                            <input type="time" name="hora_desaparicion" required="true">
+                            <input type="time" name="hora_desaparicion">
+                            <input type="date" name="fecha_desaparicion">
                         </td>
                         <td id="aplicar_op" name="patata">
                         <!-- <input name="tiempo_op" type="radio" checked> -->
