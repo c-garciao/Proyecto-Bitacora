@@ -50,9 +50,11 @@ Aquí es donde se añaden los registros de la bitácora y se guardan en la base 
 
 Actualmente, no proporciona ninguna funcionalidad. En un futuro será implementada y será útil para realiza los informes, ordenando las alertas por fechas, operadores, etc.
 
-### Página _Revisar Bitácora_
+### Página _Revisar_ _Bitácora_
 
 Desde esta página, se pueden modificar y eliminar los registros añádidos previamente.
+
+![firefox_2019-10-29_11-45-39](https://user-images.githubusercontent.com/51420640/67760666-ff9fed00-fa41-11e9-8035-c6cb5b1a2939.png)
 
 ### Página _Cambio Turno _
 
@@ -77,7 +79,7 @@ También se pueden eliminar dichos mensajes desde esta misma página.
 
 ## Autor
 
-* **Carlos Garcia** - *Programación, Front & BackEnd* - [c-garciao](https://gist.github.com/c-garciao)
+* **Carlos Garcia** - *Programación, Front & BackEnd* - [c-garciao](https://github.com/c-garciao)
 
 ## Licencia
 
