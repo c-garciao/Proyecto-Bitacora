@@ -1,5 +1,5 @@
-﻿# Proyecto bitácora SGAD 24x7
-Proyecto bitácora SGAD 24x7
+# Proyecto bitácora operaciones
+Proyecto bitácora para el puesto de operaciones
 ## Getting Started
 
 Proyecto creado con la finalidad de agilizar y facilitar el trabajo de los técnicos de operaciones.
@@ -12,7 +12,7 @@ Necesario servidor Apache + MySQL
 ```
 sudo apt-get install apache2
 ```
-* Windows (panel de XAMPP)
+* Windows (XAMPP)
 ```
 Descargar e instalar el programa:
 https://www.apachefriends.org/download.html
@@ -21,11 +21,6 @@ https://www.apachefriends.org/download.html
 
 Solo es necesario ejecutar el siguiente comando:
 
-Say what the step will be
-
-```
-Give the example
-```
 Creación de la Base de Datos e inserción de registros
 ```
 Cargar fichero sentencia1.sql
@@ -41,35 +36,50 @@ Una vez descargado, iniciar Apache, MySQL y ejecutar index.php
 Arrancar Apache
 Arrancar MySQL
 ```
+## Funcionamiento
 
-End with an example of getting some data out of the system or using it for a little demo
+La base de datos se puede adaptar según las necesidades. Permite su utilización en casi cualquier proyecto, tan solo siendo necesario modificar los datos según correspondan (nombre de los operadores, servicios BI, etc.).
 
-## Deployment
+### Página principal
 
-Add additional notes about how to deploy this on a live system
+Aquí es donde se añaden los registros de la bitácora y se guardan en la base de datos
 
-## Built With
+![firefox_2019-10-29_11-18-39](https://user-images.githubusercontent.com/51420640/67758656-64594880-fa3e-11e9-8cf4-5bc1c0104ff4.png)
+
+### Página _Informes_
+
+Actualmente, no proporciona ninguna funcionalidad. En un futuro será implementada y será útil para realiza los informes, ordenando las alertas por fechas, operadores, etc.
+
+### Página _Revisar Bitácora_
+
+Desde esta página, se pueden modificar y eliminar los registros añádidos previamente.
+
+### Página _Cambio Turno _
+
+Permite añadir mensajes que sean útiles para el cambio de turno. Las opciones son las siguientes y cambiará el icono a la hora de representarlas en la página principal:
+*  Advertencia
+*  Mensaje
+*  Error
+
+![firefox_2019-10-29_11-04-39](https://user-images.githubusercontent.com/51420640/67759357-96b77580-fa3f-11e9-8ddd-30bdc16413f1.png)
+
+![firefox_2019-10-29_11-18-39](https://user-images.githubusercontent.com/51420640/67759570-f6158580-fa3f-11e9-945b-7d2decfc2808.png)
+
+También se pueden eliminar dichos mensajes desde esta misma página.
+
+## Herramientas utilizadas
 
 * [NetBeans](https://netbeans.org/) - IDE utilizado
 * [XAMPP](https://www.apachefriends.org/es/index.html) - Programa utilizado para simular el entorno
 * [PHP 7.2.10](https://www.php.net/) - Versión de PHP utilizada
 * [MySQL](https://www.mysql.com/) - Motor de BD utilizado
 
-## Contributing
 
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
-
-## Authors
+## Autor
 
 * **Carlos Garcia** - *Programación, Front & BackEnd* - [c-garciao](https://gist.github.com/c-garciao)
 
-Lista de contribuidores [contributors](https://github.com/your/project/contributors) que participaron en este proyecto.
-
-## License
+## Licencia
 
 This project is licensed under the GNU License - see the [LICENSE.md](LICENSE.md) file for details
 
