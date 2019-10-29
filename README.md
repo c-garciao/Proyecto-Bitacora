@@ -52,7 +52,7 @@ Actualmente, no proporciona ninguna funcionalidad. En un futuro será implementa
 
 ### Página _Revisar_ _Bitácora_
 
-Desde esta página, se pueden modificar y eliminar los registros añádidos previamente.
+Desde esta página, se pueden modificar y eliminar los registros añadidos previamente.
 
 ![firefox_2019-10-29_11-45-39](https://user-images.githubusercontent.com/51420640/67760666-ff9fed00-fa41-11e9-8035-c6cb5b1a2939.png)
 
