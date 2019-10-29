@@ -83,7 +83,7 @@ También se pueden eliminar dichos mensajes desde esta misma página.
 
 ## Licencia
 
-This project is licensed under the GNU License - see the [./LICENSE.md](LICENSE.md) file for details
+This project is licensed under the GNU License - see the [LICENSE.md](./LICENSE.md) file for details
 
 ## Agradecimientos
 
