@@ -56,7 +56,7 @@ Desde esta página, se pueden modificar y eliminar los registros añadidos previ
 
 ![firefox_2019-10-29_11-45-39](https://user-images.githubusercontent.com/51420640/67760666-ff9fed00-fa41-11e9-8035-c6cb5b1a2939.png)
 
-### Página _Cambio Turno _
+### Página _Cambio_ _Turno_
 
 Permite añadir mensajes que sean útiles para el cambio de turno. Las opciones son las siguientes y cambiará el icono a la hora de representarlas en la página principal:
 *  Advertencia
