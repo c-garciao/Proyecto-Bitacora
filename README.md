@@ -1,8 +1,8 @@
 # Proyecto bitácora operaciones
-Proyecto bitácora para el puesto de operaciones
+Proyecto bitácora para el puesto de operaciones (24x7, etc.).
 ## Getting Started
 
-Proyecto creado con la finalidad de agilizar y facilitar el trabajo de los técnicos de operaciones.
+Proyecto creado con la finalidad de agilizar y facilitar el trabajo de los técnicos de operaciones cuyas funciones sean las de gestión de incidencias.
 
 ### Requisitos
 
