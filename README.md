@@ -38,7 +38,7 @@ Arrancar MySQL
 ```
 ## Funcionamiento
 
-La base de datos se puede adaptar según las necesidades. Permite su utilización en casi cualquier proyecto, tan solo siendo necesario modificar los datos según correspondan (nombre de los operadores, servicios BI, etc.).
+La base de datos se puede adaptar según las necesidades. Permite su utilización en casi cualquier proyecto, tan solo siendo necesario modificar los datos según correspondan (nombre de los operadores, servicios BI/ANS, etc.).
 
 ### Página principal
 
